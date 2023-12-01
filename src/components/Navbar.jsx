@@ -1,4 +1,4 @@
-function Navbar(props) {
+function Navbar() {
   return (
     <nav className="Navbar">
       <ul>
