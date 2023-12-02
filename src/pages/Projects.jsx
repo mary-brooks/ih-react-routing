@@ -1,16 +1,15 @@
-import projectsData from "../assets/projects.json";
+import { Link } from 'react-router-dom';
 
-function Projects() {
+function Projects({ projectsData }) {
   return (
     <div>
       <h2>Projects</h2>
       {projectsData.map(project => {
         return (
-          <div
-            key={project.id}
-            className="project"
-          >
-            <h3>{project.name}</h3>
+          <div key={project._id} className='project'>
+            <Link to={`/projects/${project._id}`}>
+              <h3>{project.name}</h3>
+            </Link>
             <p>{project.technologies}</p>
           </div>
         );
